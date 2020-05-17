@@ -7,5 +7,7 @@ public class ItemBase extends Item {
 
     public ItemBase() {
         super(new  Item.Properties().group(ItemGroup.FOOD));
+    public ItemBase() {
+        super(new  Properties().group(ItemGroup.FOOD));
     }
 }
