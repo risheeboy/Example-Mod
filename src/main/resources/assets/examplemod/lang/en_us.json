@@ -5,17 +5,26 @@
 	"block.examplemod.heat_collector": "Heat Collector",
 	"block.examplemod.electric_furnace": "Electric Furnace",
 	"block.examplemod.mod_furnace": "Mod Furnace",
-	"itemGroup.examplemod": "Example Mod",
+	"block.examplemod.ruby_block": "Block of ruby",
+
 	"item.examplemod.ruby": "Ruby",
 	"item.examplemod.example_crystal": "Example Crystal",
-	"item.examplemod.ruby": "Ruby",
+	"item.examplemod.wild_boar_spawn_egg": "Wild Boar Spawn Egg",
+
+
+	"itemGroup.examplemod": "Example Mod",
+
 	"item.examplemod.ruby_sword": "Ruby Sword",
 	"item.examplemod.ruby_pickaxe": "Ruby Pickaxe",
 	"item.examplemod.ruby_axe": "Ruby Axe",
 	"item.examplemod.ruby_shovel": "Ruby Shovel",
 	"item.examplemod.ruby_hoe": "Ruby Hoe",
-	"block.examplemod.ruby_block": "Block of ruby",
-	"item.examplemod.wild_boar_spawn_egg": "Wild Boar Spawn Egg",
+
+	"item.examplemod.ruby_helmet": "Ruby Helmet",
+	"item.examplemod.ruby_chestplate": "Ruby Chestplate",
+	"item.examplemod.ruby_leggings": "Ruby Leggings",
+	"item.examplemod.ruby_boots": "Ruby Boots",
+
 	"gui.examplemod.refresh_mini_model": "Refresh Mini Model",
 	"gui.examplemod.energy": "Energy %s",
 	"gui.examplemod.smeltTimeProgress": "Smelt time %s/%s",
