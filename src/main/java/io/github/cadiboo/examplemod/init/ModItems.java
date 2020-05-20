@@ -6,6 +6,8 @@ import io.github.cadiboo.examplemod.item.ModdedSpawnEggItem;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.potion.Effects;
 import net.minecraft.util.LazyValue;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
@@ -49,6 +51,31 @@ public final class ModItems {
 	public static final RegistryObject<ArmorItem> RUBY_CHESTPLATE =  ITEMS.register("ruby_chestplate", () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.CHEST, new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
 	public static final RegistryObject<ArmorItem> RUBY_LEGGINGS =  ITEMS.register("ruby_leggings", () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.LEGS, new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
 	public static final RegistryObject<ArmorItem> RUBY_BOOTS =  ITEMS.register("ruby_boots", () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.FEET, new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP).group(ModItemGroups.MOD_ITEM_GROUP)));
+
+	//Food
+//	public static final RegistryObject<Item> RUBY_APPLE = ITEMS.register("ruby_apple", () -> new Item((new Item.Properties()).group(ItemGroup.FOOD).food(Foods.ENCHANTED_GOLDEN_APPLE)));
+
+	public static final Food RUBY_APPLE_FOOD = (new Food.Builder()).hunger(4).saturation(1.2F).effect(new EffectInstance(Effects.REGENERATION, 4100, 5), 1.0F).effect(new EffectInstance(Effects.RESISTANCE, 4100, 4), 1.0F).effect(new EffectInstance(Effects.FIRE_RESISTANCE, 9000, 0), 1.0F).effect(new EffectInstance(Effects.ABSORPTION, 4100, 3), 1.0F).effect(new EffectInstance(Effects.SPEED, 4100, 5), 1.0F).setAlwaysEdible().build();
+	public static final RegistryObject<Item> RUBY_APPLE = ITEMS.register("ruby_apple", () -> new Item((new Item.Properties()).group(ItemGroup.FOOD).food(RUBY_APPLE_FOOD)));
+
+
+	//public static final RegistryObject<Item> RUBY_APPLE = ITEMS.register("ruby_apple", () -> new Food.Builder().hunger(20).saturation(1.7f).effect(new EffectInstance(Effects.ABSORPTION, 6000, 5), 0.7f).build());
+		//).group(ModItemGroups.MOD_ITEM_GROUP);
+
+
+
+												/*	event.getRegistry()
+														.register(new Item(new Item.Properties().group(TutorialItemGroup.instance)
+															.food(new Food.Builder().hunger(6).saturation(1.2f)
+																.effect(new EffectInstance(Effects.ABSORPTION, 6000, 5), 0.7f).build()))
+																	.setRegistryName("test_item"));*/
+
+
+
+
+
+
+
 
 	public static void init() {
 		ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
