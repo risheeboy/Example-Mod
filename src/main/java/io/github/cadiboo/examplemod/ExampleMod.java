@@ -42,9 +42,9 @@ public final class ExampleMod {
 		// Register Configs (Does not need to be after Deferred Registers)
 		modLoadingContext.registerConfig(ModConfig.Type.CLIENT, ConfigHolder.CLIENT_SPEC);
 		modLoadingContext.registerConfig(ModConfig.Type.SERVER, ConfigHolder.SERVER_SPEC);
-	}/*
+	}
 	@SubscribeEvent
 	public static void loadCompleteEvent(FMLLoadCompleteEvent event) {
 		OreGen.generateOre();
-	}*/
+	}
 }

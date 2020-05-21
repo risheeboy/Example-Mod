@@ -30,11 +30,11 @@ public class WildBoarSaddleLayer extends LayerRenderer<WildBoarEntity, PigModel<
 	@Override
 	public void render(MatrixStack matrixStack, IRenderTypeBuffer renderTypeBuffer, int light, WildBoarEntity entity, float p_225628_5_, float p_225628_6_, float p_225628_7_, float p_225628_8_, float p_225628_9_, float p_225628_10_) {
 		if (entity.getSaddled()) {
-			this.getEntityModel().setModelAttributes(this.pigModel);
+			this.getEntityModel().copyModelAttributesTo(this.pigModel);
 			this.pigModel.setLivingAnimations(entity, p_225628_5_, p_225628_6_, p_225628_7_);
-			this.pigModel.render(entity, p_225628_5_, p_225628_6_, p_225628_8_, p_225628_9_, p_225628_10_);
-			IVertexBuilder buffer = renderTypeBuffer.getBuffer(RenderType.entityCutoutNoCull(TEXTURE));
-			this.pigModel.render(matrixStack, buffer, light, OverlayTexture.DEFAULT_LIGHT, 1.0F, 1.0F, 1.0F, 1.0F);
+			//this.pigModel.render(matrixStack, renderTypeBuffer, entity, p_225628_5_, p_225628_6_, p_225628_8_, p_225628_9_, p_225628_10_);
+			//IVertexBuilder buffer = renderTypeBuffer.getBuffer(RenderType.entityCutoutNoCull(TEXTURE));
+			//this.pigModel.render(matrixStack, buffer, light, OverlayTexture.DEFAULT_LIGHT, 1.0F, 1.0F, 1.0F, 1.0F);
 		}
 	}
 

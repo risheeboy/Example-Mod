@@ -63,7 +63,7 @@ public final class ModItems {
 		ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
 	}
 	public enum ModArmorMaterial implements IArmorMaterial {
-		RUBY(ExampleMod.MODID + ":ruby", 20, new int[] { 7, 9, 11, 7 }, 420, SoundEvents.field_226124_Y_, 6.9F, () -> {
+		RUBY(ExampleMod.MODID + ":ruby", 20, new int[] { 7, 9, 11, 7 }, 420, SoundEvents.BLOCK_CHEST_OPEN, 6.9F, () -> {
 			return Ingredient.fromItems(ModItems.RUBY.get());
 		});
 
