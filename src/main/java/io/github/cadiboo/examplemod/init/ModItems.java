@@ -55,26 +55,8 @@ public final class ModItems {
 	//Food
 //	public static final RegistryObject<Item> RUBY_APPLE = ITEMS.register("ruby_apple", () -> new Item((new Item.Properties()).group(ItemGroup.FOOD).food(Foods.ENCHANTED_GOLDEN_APPLE)));
 
-	public static final Food RUBY_APPLE_FOOD = (new Food.Builder()).hunger(4).saturation(1.2F).effect(new EffectInstance(Effects.REGENERATION, 4100, 5), 1.0F).effect(new EffectInstance(Effects.RESISTANCE, 4100, 4), 1.0F).effect(new EffectInstance(Effects.FIRE_RESISTANCE, 9000, 0), 1.0F).effect(new EffectInstance(Effects.ABSORPTION, 4100, 3), 1.0F).effect(new EffectInstance(Effects.SPEED, 4100, 5), 1.0F).setAlwaysEdible().build();
+	public static final Food RUBY_APPLE_FOOD = (new Food.Builder()).hunger(4).saturation(1.2F).effect(new EffectInstance(Effects.REGENERATION, 4100, 5), 1.0F).effect(new EffectInstance(Effects.RESISTANCE, 4100, 4), 1.0F).effect(new EffectInstance(Effects.FIRE_RESISTANCE, 9000, 0), 1.0F).effect(new EffectInstance(Effects.ABSORPTION, 4100, 3), 1.0F).effect(new EffectInstance(Effects.SPEED, 4100, 15), 1.0F).setAlwaysEdible().build();
 	public static final RegistryObject<Item> RUBY_APPLE = ITEMS.register("ruby_apple", () -> new Item((new Item.Properties()).group(ItemGroup.FOOD).food(RUBY_APPLE_FOOD)));
-
-
-	//public static final RegistryObject<Item> RUBY_APPLE = ITEMS.register("ruby_apple", () -> new Food.Builder().hunger(20).saturation(1.7f).effect(new EffectInstance(Effects.ABSORPTION, 6000, 5), 0.7f).build());
-		//).group(ModItemGroups.MOD_ITEM_GROUP);
-
-
-
-												/*	event.getRegistry()
-														.register(new Item(new Item.Properties().group(TutorialItemGroup.instance)
-															.food(new Food.Builder().hunger(6).saturation(1.2f)
-																.effect(new EffectInstance(Effects.ABSORPTION, 6000, 5), 0.7f).build()))
-																	.setRegistryName("test_item"));*/
-
-
-
-
-
-
 
 
 	public static void init() {
