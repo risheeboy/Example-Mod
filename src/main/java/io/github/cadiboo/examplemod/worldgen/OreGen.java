@@ -18,7 +18,7 @@ public class OreGen {
 				ConfiguredPlacement customConfig = Placement.COUNT_RANGE
 						.configure(new CountRangeConfig(20, 5, 5, 25));
 				biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE
-					.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.EXAMPLE_ORE.get().getDefaultState(), 10))
+					.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.RUBY_ORE.get().getDefaultState(), 10))
 					.withPlacement(customConfig));
 			}
 		}

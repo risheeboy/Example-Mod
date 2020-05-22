@@ -55,7 +55,20 @@ public final class ModItems {
 	//Food
 //	public static final RegistryObject<Item> RUBY_APPLE = ITEMS.register("ruby_apple", () -> new Item((new Item.Properties()).group(ItemGroup.FOOD).food(Foods.ENCHANTED_GOLDEN_APPLE)));
 
-	public static final Food RUBY_APPLE_FOOD = (new Food.Builder()).hunger(4).saturation(1.2F).effect(new EffectInstance(Effects.REGENERATION, 4100, 5), 1.0F).effect(new EffectInstance(Effects.RESISTANCE, 4100, 4), 1.0F).effect(new EffectInstance(Effects.FIRE_RESISTANCE, 9000, 0), 1.0F).effect(new EffectInstance(Effects.ABSORPTION, 4100, 3), 1.0F).effect(new EffectInstance(Effects.SPEED, 4100, 15), 1.0F).setAlwaysEdible().build();
+	public static final Food RUBY_APPLE_FOOD = (new Food.Builder()).hunger(4).saturation(1.2F).effect(new EffectInstance(Effects.REGENERATION, 4100, 5), 1.0F)
+			.effect(new EffectInstance(Effects.RESISTANCE, 44100, 100), 1.0F)
+			.effect(new EffectInstance(Effects.FIRE_RESISTANCE, 49000, 0), 1.0F)
+			.effect(new EffectInstance(Effects.ABSORPTION, 44100, 3), 1.0F)
+			.effect(new EffectInstance(Effects.JUMP_BOOST, 44100, 15), 1.0F)
+			.effect(new EffectInstance(Effects.NIGHT_VISION, 44100, 2), 1.0F)
+			.effect(new EffectInstance(Effects.WATER_BREATHING, 44100, 15), 1.0F)
+			.effect(new EffectInstance(Effects.HASTE, 44100, 2), 1.0F)
+			.effect(new EffectInstance(Effects.SPEED, 44100, 15), 1.0F)
+			.effect(new EffectInstance(Effects.STRENGTH, 44100, 15), 1.0F)
+			.effect(new EffectInstance(Effects.HERO_OF_THE_VILLAGE, 44100, 1), 1.0F)
+			.effect(new EffectInstance(Effects.INVISIBILITY, 44100, 1), 1.0F)
+			.effect(new EffectInstance(Effects.INSTANT_HEALTH, 44100, 15), 1.0F)
+			.setAlwaysEdible().build();
 	public static final RegistryObject<Item> RUBY_APPLE = ITEMS.register("ruby_apple", () -> new Item((new Item.Properties()).group(ItemGroup.FOOD).food(RUBY_APPLE_FOOD)));
 
 
