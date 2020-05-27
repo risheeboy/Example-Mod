@@ -1,12 +1,11 @@
 package io.github.cadiboo.examplemod;
 
 import io.github.cadiboo.examplemod.config.ConfigHolder;
-import io.github.cadiboo.examplemod.init.ModBlocks;
-import io.github.cadiboo.examplemod.init.ModContainerTypes;
-import io.github.cadiboo.examplemod.init.ModEntityTypes;
-import io.github.cadiboo.examplemod.init.ModItems;
-import io.github.cadiboo.examplemod.init.ModTileEntityTypes;
-import io.github.cadiboo.examplemod.worldgen.OreGen;
+import io.github.cadiboo.examplemod.init.*;
+import io.github.cadiboo.examplemod.world.gen.OreGen;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.biome.Biome;
+import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -27,6 +26,9 @@ public final class ExampleMod {
 	public static final String MODID = "examplemod";
 	public static final Logger LOGGER = LogManager.getLogger(MODID);
 
+	public static final ResourceLocation EXAMPLE_DIM_TYPE = new ResourceLocation(MODID, "example");
+
+
 	public ExampleMod() {
 		LOGGER.debug("Hello from Example Mod!");
 
@@ -42,9 +44,18 @@ public final class ExampleMod {
 		// Register Configs (Does not need to be after Deferred Registers)
 		modLoadingContext.registerConfig(ModConfig.Type.CLIENT, ConfigHolder.CLIENT_SPEC);
 		modLoadingContext.registerConfig(ModConfig.Type.SERVER, ConfigHolder.SERVER_SPEC);
+
+		BiomeInit.BIOMES.register(modEventBus);
+		DimensionInit.MOD_DIMENSIONS.register(modEventBus);
+
 	}
 	@SubscribeEvent
 	public static void loadCompleteEvent(FMLLoadCompleteEvent event) {
 		OreGen.generateOre();
+	}
+
+	@SubscribeEvent
+	public static void onRegisterBiomes(final RegistryEvent.Register<Biome> event) {
+		BiomeInit.registerBiomes();
 	}
 }

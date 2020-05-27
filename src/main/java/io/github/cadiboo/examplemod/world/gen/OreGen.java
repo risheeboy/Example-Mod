@@ -1,4 +1,4 @@
-package io.github.cadiboo.examplemod.worldgen;
+package io.github.cadiboo.examplemod.world.gen;
 
 import io.github.cadiboo.examplemod.init.ModBlocks;
 import net.minecraft.world.biome.Biome;
