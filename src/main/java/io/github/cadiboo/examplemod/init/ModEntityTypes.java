@@ -5,7 +5,9 @@ import io.github.cadiboo.examplemod.entity.WildBoarEntity;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -30,5 +32,7 @@ public final class ModEntityTypes {
 					.size(EntityType.PIG.getWidth(), EntityType.PIG.getHeight())
 					.build(new ResourceLocation(ExampleMod.MODID, WILD_BOAR_NAME).toString())
 	);
+
+
 
 }
